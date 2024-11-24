@@ -1,0 +1,16 @@
+{
+    "appId": "com.Ymlidiwr.electron-project",
+    "files": ["dist-electron", "dist-react"],
+    "extraResources": ["dist-electron/preload.cjs", "src/assets/**"],
+    "icon": "./ymlidiwrIcon.png",
+    "mac": {
+        "target": "dmg"
+    },
+    "linux": {
+        "target": "AppImage",
+        "category": "Utility"
+    },
+    "win": {
+        "target": ["portable", "msi"]
+    }
+}
