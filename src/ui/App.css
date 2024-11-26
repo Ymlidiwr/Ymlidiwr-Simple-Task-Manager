@@ -7,27 +7,6 @@ header {
   -webkit-app-region: drag;
 }
 
-/* header button {
-  all: unset;
-  border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
-  margin: 0.25rem;
-  -webkit-app-region: no-drag;
-}
-
-#close {
-  background-color: red;
-}
-
-#minimize {
-  background-color: yellow;
-}
-
-#maximize {
-  background-color: lime;
-} */
-
 .main {
   display: grid;
   grid-template-columns: 16rem auto;
