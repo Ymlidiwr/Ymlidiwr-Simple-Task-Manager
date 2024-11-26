@@ -5,48 +5,18 @@ export function createMenu(mainWindow: BrowserWindow) {
   Menu.setApplicationMenu(
     Menu.buildFromTemplate([
       {
-        label: process.platform === 'darwin' ? undefined : 'App',
+        label: process.platform === 'win32' ? 'App' : undefined,
         type: 'submenu',
         submenu: [
-          {
-            label: 'Quit',
-            click: app.quit,
-          },
           {
             label: 'DevTools',
             click: () => mainWindow.webContents.openDevTools(),
             visible: isDev(),
           },
-        ],
-      },
-      {
-        label: 'View',
-        type: 'submenu',
-        submenu: [
           {
-            label: 'CPU',
-            click: () =>
-              ipcWebContentsSend('changeView', mainWindow.webContents, 'CPU'),
+            label: 'Quit',
+            click: app.quit,
           },
-          {
-            label: 'RAM',
-            click: () =>
-              ipcWebContentsSend('changeView', mainWindow.webContents, 'RAM'),
-          },
-          {
-            label: 'STORAGE',
-            click: () =>
-              ipcWebContentsSend(
-                'changeView',
-                mainWindow.webContents,
-                'STORAGE'
-              ),
-          },
-          {
-            label: 'GPU',
-            click: () =>
-              ipcWebContentsSend('changeView', mainWindow.webContents, 'GPU'),
-          }
         ],
       },
     ])
