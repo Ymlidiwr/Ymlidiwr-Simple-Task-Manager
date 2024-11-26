@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react';
-import reactLogo from './assets/react.svg';
 import './App.css';
 import { useStatistics } from './useStatistics';
 import { Chart } from './Chart';
@@ -36,10 +35,6 @@ function App() {
         return gpuUsages;
     }
   }, [activeView, cpuUsages, ramUsages, storageUsages, gpuUsages]);
-
-  // useEffect(() => {
-  //   return window.electron.subscribeChangeView((view) => setActiveView(view));
-  // }, []);
 
   return (
     <div className="App">
@@ -107,25 +102,6 @@ function SelectOption(props: {
     </button>
   );
 }
-
-// function Header() {
-//   return (
-//     <header>
-//       <button
-//         id="close"
-//         onClick={() => window.electron.sendFrameAction('CLOSE')}
-//       />
-//       <button
-//         id="minimize"
-//         onClick={() => window.electron.sendFrameAction('MINIMIZE')}
-//       />
-//       <button
-//         id="maximize"
-//         onClick={() => window.electron.sendFrameAction('MAXIMIZE')}
-//       />
-//     </header>
-//   );
-// }
 
 function useStaticData() {
   const [staticData, setStaticData] = useState<StaticData | null>(null);
