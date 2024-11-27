@@ -4,6 +4,11 @@
 
 A desktop application that shows the PC component usages just like in task manager
 
+## :movie_camera: 
+
+
+
+
 ## 🛠 Technologies Used
 ![Electron](https://img.shields.io/badge/Electron-33.2.0-blue.svg)
 ![React](https://img.shields.io/badge/React-18.3.1-blue.svg)
