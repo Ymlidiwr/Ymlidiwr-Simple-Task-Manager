@@ -3,12 +3,7 @@ import { getAssetPath } from './pathResolver.js';
 import path from 'path';
 
 export function createTray(mainWindow: BrowserWindow) {
-  const tray = new Tray(
-    path.join(
-      getAssetPath(),
-      process.platform === 'win32' ? 'trayIconTemplate.png' : 'trayIcon.png'
-    )
-  );
+  const tray = new Tray(path.join(getAssetPath(),'trayIcon.png'));
 
   tray.setContextMenu(
     Menu.buildFromTemplate([
