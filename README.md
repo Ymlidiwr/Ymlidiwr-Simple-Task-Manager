@@ -10,9 +10,9 @@
 - Feature 3: Something that makes your project stand out
 
 ## 🛠 Technologies Used
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![Flask](https://img.shields.io/badge/Flask-2.0+-green.svg)
-![SQLite](https://img.shields.io/badge/SQLite-Database-blue.svg)
+![Electron](https://img.shields.io/badge/Electron-33.2.0-blue.svg)
+![React](https://img.shields.io/badge/React-18.3.1-blue.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.7.2-blue.svg)
 
 ## 📦 Prerequisites
 
