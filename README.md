@@ -5,6 +5,7 @@
 A desktop application that shows the PC component usages
 
 ## :movie_camera: Video Demo
+https://youtu.be/YkKtqJclG8k
 
 
 ## :page_facing_up: Description
