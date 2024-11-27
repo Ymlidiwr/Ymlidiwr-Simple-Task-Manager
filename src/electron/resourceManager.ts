@@ -6,7 +6,7 @@ import { BrowserWindow } from 'electron';
 import { ipcWebContentsSend } from './util.js';
 import { exec } from 'child_process';
 
-const POLLING_INTERVAL = 100;
+const POLLING_INTERVAL = 50;
 
 export function pollResources(mainWindow: BrowserWindow) {
   let isPolling = false;
