@@ -133,7 +133,7 @@ async function getGpuUsage(): Promise<number> {
 
     return new Promise<number>((resolve) => {
 
-      if (process.platform === 'win32' || process.platform === 'linux') {
+      if (process.platform === 'win32') {
         exec('nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits', (error: Error | null, stdout: string, stderr: string) => {
           if (error) {
             console.warn('nvidia-smi command failed:', error);
