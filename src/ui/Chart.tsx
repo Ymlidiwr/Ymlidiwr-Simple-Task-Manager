@@ -9,20 +9,20 @@ export type ChartProps = {
 
 export const COLOR_MAP = {
   CPU: {
-    stroke: '#5DD4EE',
-    fill: '#0A4D5C',
+    stroke: '#31b0cd',
+    fill: '#2b8da3',
   },
   RAM: {
-    stroke: '#E99311',
-    fill: '#5F3C07',
+    stroke: '#748aeb',
+    fill: '#5d6db6',
   },
   STORAGE: {
-    stroke: '#1ACF4D',
-    fill: '#0B5B22',
+    stroke: '#ef8ccb',
+    fill: '#b46d9a',
   },
   GPU: {
-    stroke: '#FF47B6',
-    fill: '#6B1E4D',
+    stroke: '#a083c9',
+    fill: '#806aa0',
   },
 };
 

@@ -7,6 +7,7 @@ function App() {
   const staticData = useStaticData();
   const statistics = useStatistics(10);
   const [activeView, setActiveView] = useState<View>('CPU');
+  
   const cpuUsages = useMemo(
     () => statistics.map((stat) => stat.cpuUsage),
     [statistics]
@@ -23,6 +24,14 @@ function App() {
     () => statistics.map((stat) => stat.gpuUsage),
     [statistics]
   );
+
+  const getLatestPercentage = (usages: number[]) => {
+    const latestUsage = usages[usages.length - 1];
+    return latestUsage !== undefined 
+      ? Math.round(latestUsage * 100) 
+      : 0;
+  };
+
   const activeUsages = useMemo(() => {
     switch (activeView) {
       case 'CPU':
@@ -46,22 +55,25 @@ function App() {
             view="CPU"
             subTitle={staticData?.cpuModel ?? ''}
             data={cpuUsages}
+            percentage={getLatestPercentage(cpuUsages)}
           />
           <SelectOption
             onClick={() => setActiveView('RAM')}
             title="RAM"
             view="RAM"
-            subTitle={(staticData?.totalMemoryGB.toString() ?? '') + ' GB'}
+            subTitle={(staticData?.totalMemoryGB.toString() ?? '') + 'GB'}
             data={ramUsages}
+            percentage={getLatestPercentage(ramUsages)}
           />
           <SelectOption
             onClick={() => setActiveView('STORAGE')}
             title="STORAGE"
             view="STORAGE"
-            subTitle={(staticData?.totalStorage.toString() ?? '') + ' GB'}
+            subTitle={(staticData?.totalStorage.toString() ?? '') + 'GB'}
             data={storageUsages}
+            percentage={getLatestPercentage(storageUsages)}
           />
-            <SelectOption
+          <SelectOption
             onClick={() => setActiveView('GPU')}
             title="GPU"
             view="GPU"
@@ -69,6 +81,7 @@ function App() {
               staticData?.gpuMemoryGB ?? 0
             } GB)`}
             data={gpuUsages}
+            percentage={getLatestPercentage(gpuUsages)}
           />
         </div>
         <div className="mainGrid">
@@ -88,12 +101,16 @@ function SelectOption(props: {
   view: View;
   subTitle: string;
   data: number[];
+  percentage: number;
   onClick: () => void;
 }) {
   return (
     <button className="selectOption" onClick={props.onClick}>
       <div className="selectOptionTitle">
-        <div>{props.title}</div>
+        <div className="flex justify-between">
+          <span>{props.title}</span>
+          <span>{props.percentage}%</span>
+        </div>
         <div>{props.subTitle}</div>
       </div>
       <div className="selectOptionChart">

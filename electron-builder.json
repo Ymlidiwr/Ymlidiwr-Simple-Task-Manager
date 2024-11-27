@@ -2,7 +2,7 @@
     "appId": "com.Ymlidiwr.electron-project",
     "files": ["dist-electron", "dist-react"],
     "extraResources": ["dist-electron/preload.cjs", "src/assets/**"],
-    "icon": "./ymlidiwrIcon.png",
+    "icon": "./desktopIcon.png",
     "mac": {
         "target": "dmg"
     },
