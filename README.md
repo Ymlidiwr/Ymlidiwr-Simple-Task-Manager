@@ -1,4 +1,4 @@
 # Ymlidiwr Simple Task Manager
-A PC component usage visualizer like the task manager
+A desktop application made in electron which visualizes the PC component usages in like the task manager
 #### Video Demo:  <URL HERE>
 #### Description:
