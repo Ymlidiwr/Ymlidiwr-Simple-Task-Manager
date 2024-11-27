@@ -1,13 +1,8 @@
-# 🚀 [Ymlidiwr Simple Task Manager]
+# 🚀 Ymlidiwr Simple Task Manager
 
 ## 📝 Project Overview
 
-[Briefly describe your project, its purpose, and the key problem it solves. Highlight what makes your project unique or interesting.]
-
-### 🌟 Key Features
-- Feature 1: Brief description
-- Feature 2: Another cool capability
-- Feature 3: Something that makes your project stand out
+A desktop application that shows the PC component usages just like in task manager
 
 ## 🛠 Technologies Used
 ![Electron](https://img.shields.io/badge/Electron-33.2.0-blue.svg)
@@ -17,62 +12,35 @@
 ## 📦 Prerequisites
 
 Before you begin, ensure you have met the following requirements:
-- Python 3.8 or higher
-- pip (Python package manager)
-- A virtual environment (recommended)
+- Electron 33.2.0
+- node js 23.3.0
+- React js 18.3.1
+- TypeScript 5.7.2
 
 ## 🔧 Installation & Setup
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/yourusername/Ymlidiwr-Simple-Task-Manager.git
+cd Ymlidiwr-Simple-Task-Manager
 ```
 
-2. Create a virtual environment
+2. Install dependencies
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-```
-
-3. Install dependencies
-```bash
-pip install -r requirements.txt
+npm i systeminformation
+npm i fs
+npm i os
+npm i os-utils
 ```
 
 ## 💻 Running the Project
 
 ### Local Development
 ```bash
-flask run
+npm run dev
 ```
 
 ### Running Tests
 ```bash
-python -m unittest discover tests
+npm run test:unit
 ```
-
-## 🎥 Demo / Screenshots
-[Include 2-3 screenshots or GIFs showing your project in action]
-
-## 🤝 CS50 Specific Information
-- **Course**: CS50's Introduction to Computer Science
-- **Problem Set/Final Project**: [Specify which assignment or final project]
-- **Implemented Features**: List specific requirements you've met
-
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## 🙌 Acknowledgements
-- CS50 Staff
-- Harvard University
-- Any libraries or resources you used
-
-## 📬 Contact
-- Your Name
-- Your Email
-- Project Link: [https://github.com/yourusername/your-repo-name](https://github.com/yourusername/your-repo-name)
-
----
-
-**Made with ❤️ for CS50**
