@@ -4,7 +4,10 @@
 
 A desktop application that shows the PC component usages just like in task manager
 
-## :movie_camera: 
+## :movie_camera: Video Demo
+
+
+## :page_facing_up: Description
 
 
 
