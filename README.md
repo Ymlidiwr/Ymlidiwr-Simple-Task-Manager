@@ -31,6 +31,7 @@ npm i systeminformation
 npm i fs
 npm i os
 npm i os-utils
+npm i --save-dev @types/os-utils
 ```
 
 ## 💻 Running the Project
